@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator37 - 무료 온라인 계산기 | 기본/공학용/단위변환/금융계산기</title>
+    <meta name="description" content="무료 온라인 계산기 Calculator37. 기본 계산기, 공학용 계산기, 단위 변환기, 금융 계산기(이자/대출)를 한 곳에서! 정확하고 빠른 계산을 경험하세요.">
+    <meta name="keywords" content="계산기, 온라인 계산기, 무료 계산기, 공학용 계산기, 단위 변환기, 금융 계산기, 이자 계산기, 대출 계산기, 길이 변환, 무게 변환, 온도 변환">
+    <meta name="author" content="Calculator37">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-username.github.io/y1/">
+    <meta property="og:title" content="Calculator37 - 무료 온라인 계산기">
+    <meta property="og:description" content="기본 계산기부터 공학용, 단위 변환, 금융 계산까지 모든 계산을 한 곳에서!">
+    <meta property="og:image" content="https://your-username.github.io/y1/calculator-preview.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://your-username.github.io/y1/">
+    <meta property="twitter:title" content="Calculator37 - 무료 온라인 계산기">
+    <meta property="twitter:description" content="기본 계산기부터 공학용, 단위 변환, 금융 계산까지 모든 계산을 한 곳에서!">
+    <meta property="twitter:image" content="https://your-username.github.io/y1/calculator-preview.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://your-username.github.io/y1/">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- 구조화된 데이터 (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Calculator37",
+        "description": "무료 온라인 계산기 - 기본 계산기, 공학용 계산기, 단위 변환기, 금융 계산기",
+        "url": "https://your-username.github.io/y1/",
+        "applicationCategory": "CalculatorApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "KRW"
+        },
+        "featureList": [
+            "기본 계산기",
+            "공학용 계산기", 
+            "단위 변환기",
+            "금융 계산기",
+            "이자 계산기",
+            "대출 계산기"
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-calculator"></i>
+                <span>Calculator37</span>
+            </div>
+            <div class="nav-links">
+                <a href="#basic" class="nav-link active">기본 계산기</a>
+                <a href="#scientific" class="nav-link">공학용</a>
+                <a href="#unit" class="nav-link">단위 변환</a>
+                <a href="#finance" class="nav-link">금융</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SEO를 위한 메인 제목 -->
+        <h1 style="display: none;">Calculator37 - 무료 온라인 계산기</h1>
+        
+        <!-- 광고 배너 -->
+        <div class="ad-banner" id="ad-banner">
+            <div class="ad-placeholder">
+                <i class="fas fa-ad"></i>
+                <span>광고 영역</span>
+            </div>
+        </div>
+
+        <!-- 기본 계산기 섹션 -->
+        <section id="basic" class="calculator-section active">
+            <h2><i class="fas fa-calculator"></i> 기본 계산기</h2>
+            <p class="section-description">일반적인 사칙연산을 빠르고 정확하게 계산할 수 있습니다.</p>
+            <div class="calculator-container">
+                <div class="calculator">
+                    <div class="display">
+                        <div class="previous-operand" id="previous-operand"></div>
+                        <div class="current-operand" id="current-operand">0</div>
+                    </div>
+                    <div class="buttons">
+                        <button class="btn clear" onclick="clearAll()">AC</button>
+                        <button class="btn operator" onclick="deleteLast()">⌫</button>
+                        <button class="btn operator" onclick="appendOperator('%')">%</button>
+                        <button class="btn operator" onclick="appendOperator('÷')">÷</button>
+                        
+                        <button class="btn number" onclick="appendNumber('7')">7</button>
+                        <button class="btn number" onclick="appendNumber('8')">8</button>
+                        <button class="btn number" onclick="appendNumber('9')">9</button>
+                        <button class="btn operator" onclick="appendOperator('×')">×</button>
+                        
+                        <button class="btn number" onclick="appendNumber('4')">4</button>
+                        <button class="btn number" onclick="appendNumber('5')">5</button>
+                        <button class="btn number" onclick="appendNumber('6')">6</button>
+                        <button class="btn operator" onclick="appendOperator('-')">-</button>
+                        
+                        <button class="btn number" onclick="appendNumber('1')">1</button>
+                        <button class="btn number" onclick="appendNumber('2')">2</button>
+                        <button class="btn number" onclick="appendNumber('3')">3</button>
+                        <button class="btn operator" onclick="appendOperator('+')">+</button>
+                        
+                        <button class="btn number zero" onclick="appendNumber('0')">0</button>
+                        <button class="btn number" onclick="appendDecimal()">.</button>
+                        <button class="btn equals" onclick="calculate()">=</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 공학용 계산기 섹션 -->
+        <section id="scientific" class="calculator-section">
+            <h2><i class="fas fa-microscope"></i> 공학용 계산기</h2>
+            <p class="section-description">삼각함수, 로그함수, 제곱근 등 고급 수학 계산을 지원합니다.</p>
+            <div class="calculator-container">
+                <div class="scientific-calculator">
+                    <div class="display">
+                        <div class="previous-operand" id="sci-previous-operand"></div>
+                        <div class="current-operand" id="sci-current-operand">0</div>
+                    </div>
+                    <div class="buttons">
+                        <button class="btn function" onclick="scientificFunction('sin')">sin</button>
+                        <button class="btn function" onclick="scientificFunction('cos')">cos</button>
+                        <button class="btn function" onclick="scientificFunction('tan')">tan</button>
+                        <button class="btn clear" onclick="clearScientific()">AC</button>
+                        
+                        <button class="btn function" onclick="scientificFunction('log')">log</button>
+                        <button class="btn function" onclick="scientificFunction('ln')">ln</button>
+                        <button class="btn function" onclick="scientificFunction('sqrt')">√</button>
+                        <button class="btn operator" onclick="appendScientificOperator('^')">^</button>
+                        
+                        <button class="btn number" onclick="appendScientificNumber('7')">7</button>
+                        <button class="btn number" onclick="appendScientificNumber('8')">8</button>
+                        <button class="btn number" onclick="appendScientificNumber('9')">9</button>
+                        <button class="btn operator" onclick="appendScientificOperator('÷')">÷</button>
+                        
+                        <button class="btn number" onclick="appendScientificNumber('4')">4</button>
+                        <button class="btn number" onclick="appendScientificNumber('5')">5</button>
+                        <button class="btn number" onclick="appendScientificNumber('6')">6</button>
+                        <button class="btn operator" onclick="appendScientificOperator('×')">×</button>
+                        
+                        <button class="btn number" onclick="appendScientificNumber('1')">1</button>
+                        <button class="btn number" onclick="appendScientificNumber('2')">2</button>
+                        <button class="btn number" onclick="appendScientificNumber('3')">3</button>
+                        <button class="btn operator" onclick="appendScientificOperator('-')">-</button>
+                        
+                        <button class="btn number" onclick="appendScientificNumber('0')">0</button>
+                        <button class="btn number" onclick="appendScientificDecimal()">.</button>
+                        <button class="btn equals" onclick="calculateScientific()">=</button>
+                        <button class="btn operator" onclick="appendScientificOperator('+')">+</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 단위 변환 섹션 -->
+        <section id="unit" class="calculator-section">
+            <h2><i class="fas fa-exchange-alt"></i> 단위 변환기</h2>
+            <p class="section-description">길이, 무게, 온도, 면적, 부피 등 다양한 단위를 쉽게 변환할 수 있습니다.</p>
+            <div class="unit-converter">
+                <div class="converter-group">
+                    <label for="unit-type">변환 유형:</label>
+                    <select id="unit-type" onchange="changeUnitType()">
+                        <option value="length">길이</option>
+                        <option value="weight">무게</option>
+                        <option value="temperature">온도</option>
+                        <option value="area">면적</option>
+                        <option value="volume">부피</option>
+                    </select>
+                </div>
+                
+                <div class="converter-inputs">
+                    <div class="input-group">
+                        <input type="number" id="from-value" oninput="convertUnit()" placeholder="값 입력">
+                        <select id="from-unit"></select>
+                    </div>
+                    <div class="swap-btn" onclick="swapUnits()">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="input-group">
+                        <input type="number" id="to-value" readonly>
+                        <select id="to-unit" onchange="convertUnit()"></select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 금융 계산기 섹션 -->
+        <section id="finance" class="calculator-section">
+            <h2><i class="fas fa-chart-line"></i> 금융 계산기</h2>
+            <p class="section-description">이자 계산과 대출 상환금 계산을 도와드립니다.</p>
+            <div class="finance-calculators">
+                <div class="finance-calc">
+                    <h3>이자 계산기</h3>
+                    <div class="input-group">
+                        <label>원금 (원)</label>
+                        <input type="number" id="principal" placeholder="1000000">
+                    </div>
+                    <div class="input-group">
+                        <label>이율 (%)</label>
+                        <input type="number" id="rate" placeholder="5.0" step="0.1">
+                    </div>
+                    <div class="input-group">
+                        <label>기간 (년)</label>
+                        <input type="number" id="time" placeholder="1">
+                    </div>
+                    <button onclick="calculateInterest()">계산하기</button>
+                    <div class="result" id="interest-result"></div>
+                </div>
+                
+                <div class="finance-calc">
+                    <h3>대출 계산기</h3>
+                    <div class="input-group">
+                        <label>대출금액 (원)</label>
+                        <input type="number" id="loan-amount" placeholder="30000000">
+                    </div>
+                    <div class="input-group">
+                        <label>이율 (%)</label>
+                        <input type="number" id="loan-rate" placeholder="3.5" step="0.1">
+                    </div>
+                    <div class="input-group">
+                        <label>상환기간 (년)</label>
+                        <input type="number" id="loan-term" placeholder="20">
+                    </div>
+                    <button onclick="calculateLoan()">계산하기</button>
+                    <div class="result" id="loan-result"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 사이드 광고 -->
+        <div class="side-ad" id="side-ad">
+            <div class="ad-placeholder">
+                <i class="fas fa-ad"></i>
+                <span>광고</span>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Calculator37</h4>
+                <p>무료 온라인 계산기 서비스</p>
+                <p>기본 계산기, 공학용 계산기, 단위 변환기, 금융 계산기</p>
+            </div>
+            <div class="footer-section">
+                <h4>주요 기능</h4>
+                <ul>
+                    <li>기본 계산기</li>
+                    <li>공학용 계산기</li>
+                    <li>단위 변환기</li>
+                    <li>금융 계산기</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>지원 단위</h4>
+                <ul>
+                    <li>길이: 미터, 킬로미터, 인치, 피트 등</li>
+                    <li>무게: 그램, 킬로그램, 파운드 등</li>
+                    <li>온도: 섭씨, 화씨, 켈빈</li>
+                    <li>면적: 제곱미터, 헥타르, 에이커 등</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Calculator37. 모든 계산을 한 곳에서!</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
